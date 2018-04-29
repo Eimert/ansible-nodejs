@@ -9,7 +9,7 @@
 - name: install add-apt-repository and https binaries for Ansible to work
   apt: name={{ item }} state=present update_cache=yes
   with_items:
-    - python-software-properties
+    - software-properties-common
     - apt-transport-https
 
 - name: install tools for compiling native addons from npm
